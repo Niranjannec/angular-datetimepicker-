@@ -1,0 +1,13 @@
+"Startdate configuration"
+<label><strong>{{baseController.StartDate == null ? "Start Date":baseController.StartDate}}</strong></label>
+<div class='input-group date'>
+<input type="text" class="form-control" placeholder="Select Start Date...." name="start" datetime-picker date-format="yyyy-MM-dd HH:mm" ng-change="startDateChange(this)" ng-model="budgetModalData.StartDate" readonly required/>     
+</div>
+
+"Enddate config"
+<label class="control-label"><strong>{{baseController.EndDate == null ? "End Date":baseController.EndDate}}</strong></label>
+<div class='input-group date'>
+<input type="text" class="form-control" placeholder="Select End Date...." name="end" datetime-picker date-format="yyyy-MM-dd HH:mm"  ng-model="budgetModalData.EndDate" min-date="eminDateString" is-open="date.showFlag" readonly required/>        
+</div>
+
+the ng-change is not triggered on any change from the picker hence startdatechange is not getting executed.....
